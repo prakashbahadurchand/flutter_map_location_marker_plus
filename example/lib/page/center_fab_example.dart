@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
+import 'package:flutter_map_location_marker_plus/flutter_map_location_marker_plus.dart';
 import 'package:latlong2/latlong.dart';
 
 class CenterFabExample extends StatefulWidget {
@@ -36,9 +36,9 @@ class _CenterFabExampleState extends State<CenterFabExample> {
       body: FlutterMap(
         options: MapOptions(
           initialCenter: const LatLng(0, 0),
-          initialZoom: 1,
-          minZoom: 0,
-          maxZoom: 19,
+          initialZoom: 20,
+          minZoom: 12,
+          maxZoom: 21,
           // Stop aligning the location marker to the center of the map widget
           // if user interacted with the map.
           onPositionChanged: (MapCamera camera, bool hasGesture) {
@@ -55,7 +55,7 @@ class _CenterFabExampleState extends State<CenterFabExample> {
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName:
                 'net.tlserver6y.flutter_map_location_marker.example',
-            maxZoom: 19,
+            maxZoom: 21,
           ),
           CurrentLocationLayer(
             alignPositionStream: _alignPositionStreamController.stream,

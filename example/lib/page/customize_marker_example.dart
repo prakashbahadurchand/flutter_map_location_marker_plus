@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
+import 'package:flutter_map_location_marker_plus/flutter_map_location_marker_plus.dart';
 import 'package:latlong2/latlong.dart';
 
 class CustomizeMarkerExample extends StatelessWidget {
@@ -12,17 +12,17 @@ class CustomizeMarkerExample extends StatelessWidget {
       ),
       body: FlutterMap(
         options: const MapOptions(
-          initialCenter: LatLng(0, 0),
-          initialZoom: 1,
-          minZoom: 0,
-          maxZoom: 19,
+          initialCenter: LatLng(27.7219375, 85.322578125),
+          initialZoom: 20,
+          minZoom: 12,
+          maxZoom: 21,
         ),
         children: [
           TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName:
                 'net.tlserver6y.flutter_map_location_marker.example',
-            maxZoom: 19,
+            maxZoom: 21,
           ),
           CurrentLocationLayer(
             style: LocationMarkerStyle(

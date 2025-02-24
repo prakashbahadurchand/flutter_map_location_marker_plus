@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
+import 'package:flutter_map_location_marker_plus/flutter_map_location_marker_plus.dart';
 import 'package:latlong2/latlong.dart';
 
 // If you want to act with original stream, also see the commented codes.
@@ -31,7 +31,8 @@ class _DefaultStreamExampleState extends State<DefaultStreamExample> {
     const factory = LocationMarkerDataStreamFactory();
     _positionStream =
         factory.fromGeolocatorPositionStream().asBroadcastStream();
-    _headingStream = factory.fromRotationSensorHeadingStream().asBroadcastStream();
+    _headingStream =
+        factory.fromRotationSensorHeadingStream().asBroadcastStream();
 
     // Get streams with default settings.
 /*    _geolocatorStream = factory.defaultPositionStreamSource().asBroadcastStream();
@@ -60,7 +61,6 @@ class _DefaultStreamExampleState extends State<DefaultStreamExample> {
       stream: _rotationSensorStream,
     );
 */
-
   }
 
   @override
@@ -75,17 +75,17 @@ class _DefaultStreamExampleState extends State<DefaultStreamExample> {
             flex: 2,
             child: FlutterMap(
               options: const MapOptions(
-                initialCenter: LatLng(0, 0),
-                initialZoom: 1,
-                minZoom: 0,
-                maxZoom: 19,
+                initialCenter: LatLng(27.7219375, 85.322578125),
+                initialZoom: 20,
+                minZoom: 12,
+                maxZoom: 21,
               ),
               children: [
                 TileLayer(
                   urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                   userAgentPackageName:
                       'net.tlserver6y.flutter_map_location_marker.example',
-                  maxZoom: 19,
+                  maxZoom: 21,
                 ),
                 CurrentLocationLayer(
                   positionStream: _positionStream,

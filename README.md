@@ -1,4 +1,4 @@
-# flutter_map_location_marker
+# flutter_map_location_marker_plus
 
 [![pub package](https://img.shields.io/pub/v/flutter_map_location_marker)](https://pub.dev/packages/flutter_map_location_marker)
 [![github tag](https://img.shields.io/github/v/tag/tlserver/flutter_map_location_marker?include_prereleases&sort=semver)](https://github.com/tlserver/flutter_map_location_marker)

@@ -11,12 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_joystick: ^0.0.4
-  flutter_map: any
-  flutter_map_location_marker:
+  flutter_joystick: ^0.2.1
+  flutter_map: ^8.0.0
+  flutter_map_location_marker_plus:
     path: ../
-  geolocator: any
-  latlong2: any
+  geolocator: ^13.0.2
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:

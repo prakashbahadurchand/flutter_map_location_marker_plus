@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../flutter_map_location_marker.dart';
+import '../../flutter_map_location_marker_plus.dart';
 
 /// An object to store indicators widget for special status of
 /// [CurrentLocationLayer].

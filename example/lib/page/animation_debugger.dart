@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_location_marker/flutter_map_location_marker.dart';
+import 'package:flutter_map_location_marker_plus/flutter_map_location_marker_plus.dart';
 import 'package:latlong2/latlong.dart';
 
 class AnimationDebugger extends StatefulWidget {
@@ -29,17 +29,17 @@ class _AnimationDebuggerState extends State<AnimationDebugger> {
       ),
       body: FlutterMap(
         options: const MapOptions(
-          initialCenter: LatLng(0, 0),
-          initialZoom: 8,
-          minZoom: 0,
-          maxZoom: 19,
+          initialCenter: LatLng(27.7219375, 85.322578125),
+          initialZoom: 20,
+          minZoom: 12,
+          maxZoom: 21,
         ),
         children: [
           TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName:
-                'net.tlserver6y.flutter_map_location_marker.example',
-            maxZoom: 19,
+                'net.tlserver6y.flutter_map_location_marker_plus.example',
+            maxZoom: 21,
           ),
           AnimatedLocationMarkerLayer(
             position: _locationMarkerPosition,
